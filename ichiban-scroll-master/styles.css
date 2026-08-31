@@ -1,0 +1,451 @@
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('./assets/Akira\ Expanded\ Demo.otf');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100dvw;
+  height: 100dvh;
+  object-fit: cover;
+  position: fixed;
+}
+
+main {
+  height: 300dvh;
+}
+
+header {
+  background: linear-gradient(60deg, #b83614, #8d1404 80%);
+  width: 800px;
+  height: 800px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-top: -580px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  animation: slideInDown 1250ms ease-out;
+
+  img {
+    width: auto;
+    height: 60px;
+    margin-bottom: 100px;
+    margin-top: 500px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+#scroll-dwn {
+  height: 750px;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  position: absolute;
+  z-index: 1;
+  animation: slideInDown 2500ms ease-out;
+  transform: translateX(-50%);
+  left: 50%;
+  grid-column-gap: .75rem;
+
+  #arrow-cont{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    border: 1px solid rgb(29, 41, 57);
+    border-radius: 1.5px;
+    height: 17px;
+    width: 17px;
+    overflow: hidden;
+    position: relative;
+
+    #arrow-top,
+    #arrow-dwn {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: arrowMove 1s infinite;
+    }
+
+    #arrow-top{
+      animation-delay: 0s;
+    }
+
+    #arrow-dwn{
+      animation-delay: 0.5;
+    }
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 38%;
+  height: auto;
+  width: 100dvw;
+  position: absolute;
+  top: 400px;
+  z-index: 1;
+  font-family: monospace;
+  color: rgb(29, 41, 57);
+
+  #description {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40%;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  #browser {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 40%;
+    flex-direction: column;
+
+    #nav {
+      display: flex;
+      flex-direction: column;
+
+      .link {
+        position: relative;
+        border-bottom: 1px solid rgb(112, 114, 118);
+        height: 60px;
+
+        .reference-wrapper {
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+        }
+      
+        #original-website{
+          cursor: pointer;
+        }
+
+        .reference {
+          margin-left: 20px;
+        }
+
+        .top,
+        .bottom {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr;
+          position: absolute;
+          width: 100%;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+          font-size: 16px;
+        }
+
+        .top {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        .bottom {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+      }
+
+      #first-link {
+        border-top: 1px solid rgb(112, 114, 118);
+      }
+
+      .link:hover .top {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      .link:hover .bottom {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .line {
+    padding-bottom: -20px;
+
+    .under-line {
+      border-top: 1px solid rgb(112, 114, 118);
+      height: 30px;
+    }
+  }
+
+  #text-content {
+    padding-top: 15px;
+    line-height: 2.2;
+    border-top: 1px solid rgb(112, 114, 118);
+  }
+}
+
+#bot-container {
+  height: auto;
+  width: 650px;
+  position: absolute;
+  top: 2050px;
+  z-index: 2;
+  color: rgb(29, 41, 57);
+  display: flex;
+  flex-direction: column;
+  margin-left: 310px;
+
+  #title {
+    width: 70%;
+    font-family: 'Akira Expanded';
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  #kanji {
+    font-family: 'Akira Expanded';
+    display: flex;
+    font-size: 220px;
+    font-weight: bold;
+    position: relative;
+    top: -30px;
+    left: -20px;
+  }
+
+  #bento{
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+
+    .cuadricula{
+      overflow: hidden;
+
+      .points{
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    .text-desc{
+      font-family: monospace;
+      font-size: 16px;
+      color: rgb(29, 41, 57);
+      line-height: 1.6;
+    }
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(-50%, -100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 0 100% 0); /* Oculto desde arriba */
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0% 0); /* Se revela completamente */
+    opacity: 1;
+  }
+}
+
+.line,
+#text-content,
+#nav,
+.link {
+  opacity: 0;
+  animation: reveal 1s ease-out forwards;
+}
+
+.line {
+  animation-delay: 0.4s;
+}
+#text-content {
+  animation-delay: 1.2s;
+}
+#nav {
+  animation-delay: 1s;
+}
+
+
+@media (max-width: 1366px) {
+  header {
+    height: 700px;
+    width: 700px;
+
+    img {
+      width: auto;
+      height: 40px;
+      margin-bottom: 50px;
+      margin-top: 500px;
+    }
+  }
+
+  #scroll-dwn {
+    height: 400px;
+  }
+
+  #grid-container {
+    top: 180px;
+
+    #description{
+      margin-left: 20%;
+    }
+
+    #browser{
+      margin-right: 20%;
+    }
+
+    .reference{
+      margin-left: 0 !important;
+    }
+  }
+
+  #bot-container {
+    width: 500px;
+    margin-left: 100px;
+  }
+
+  #title{
+    font-size: 20px !important;
+  }
+
+  #kanji {
+    font-size: 150px !important;
+  }
+
+  .text-desc {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  header {
+    height: 700px;
+    width: 700px;
+
+    img {
+      width: auto;
+      height: 40px;
+      margin-bottom: 50px;
+      margin-top: 500px;
+    }
+  }
+
+  #scroll-dwn {
+    height: 400px;
+  }
+
+  #grid-container {
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    #description{
+      margin: 0 25px;
+      
+      #text-content{
+        background: rgba(255, 255, 255, 0.3); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px); 
+        padding: 1rem; 
+        border-radius: 10px;
+      }
+    }
+    #browser{
+      margin: 0 25px;
+    }
+  }
+
+  #bot-container {
+    width: 400px;
+    margin-left: 50px;
+  }
+
+  #kanji {
+    font-size: 150px;
+    margin: 20px 0;
+  }
+
+  #bento {
+    width: 80% !important;
+    grid-template-rows: .3fr 1fr !important;
+    column-gap: 1rem !important;
+  }
+
+  .text-desc {
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    padding: 1rem; 
+    border-radius: 10px;
+  }
+}
+
