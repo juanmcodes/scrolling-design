@@ -1,11 +1,21 @@
-# Ichiban Scroll Animation
+📖 Description
 
-Este proyecto es un clon de la página [Ichiban](https://www.ichiban.bike/).
+Ichiban Scroll Animation is a landing page featuring a beautifully crafted scroll-based animation. This is a practice project built to study and recreate a cinematic frame-by-frame scroll effect, while also improving some aspects of the original user experience (UX/UI).
 
-## Descripción
+✨ Features
+Smooth frame-by-frame scroll animation
+Responsive layout
+Clean and minimal design inspired by the original Ichiban website
+🛠️ Technologies
+HTML
+CSS
+JavaScript
+🚀 Usage
 
-Ichiban Scroll Animation es una página web que presenta una animación de desplazamiento muy bien hecha. He intentado mejorar algunos puntos de la experiencia de usuario (UX/UI).
+To see the animation in action, simply scroll down the page. The elements will animate as you scroll.
 
-## Uso
+Note: This project uses ES modules, so it needs to be served through a local server (e.g. VS Code's Live Server extension) rather than opened directly as a file.
 
-Para ver la animación en acción, simplemente desplázate hacia abajo en la página. Los elementos se animarán a medida que te desplazas.
+👤 Author
+
+Developed by Juan Durango GitHub: @juanmcodes
