@@ -1,3 +1,7 @@
+🎬 Ichiban Scroll Animation
+
+This project is a clone of the Ichiban website.
+
 📖 Description
 
 Ichiban Scroll Animation is a landing page featuring a beautifully crafted scroll-based animation. This is a practice project built to study and recreate a cinematic frame-by-frame scroll effect, while also improving some aspects of the original user experience (UX/UI).
