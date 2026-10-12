@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Moto Scroll - JuanchoDev</title>
+    <!-- Scripts clásicos con defer: funcionan abriendo el archivo con doble clic -->
+    <script defer src="./images.js"></script>
+    <script defer src="./frames.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img id="logo" src="./assets/logo.png" alt="Juancho" />
+      </header>
+
+      <div id="scroll-dwn">
+        <p>DESLIZA</p>
+        <div id="arrow-cont">
+          <div id="arrow-top"><i class="fa-solid fa-arrow-down"></i></div>
+          <div id="arrow-dwn"><i class="fa-solid fa-arrow-down"></i></div>
+        </div>
+        <p>ABAJO</p>
+      </div>
+
+      <div id="grid-container">
+        <div id="description">
+          <div class="header">
+            <p>Descripción</p>
+            <p>MOD.001</p>
+          </div>
+          <div class="line"></div>
+          <div id="text-content">
+            Más que un medio de transporte, es una vía de escape: una línea de
+            libertad en un mundo demasiado conectado.
+          </div>
+        </div>
+
+        <div id="browser">
+          <div class="header">
+            <p>Menú</p>
+            <p>LISTA:COMPLETA</p>
+          </div>
+          <div class="line"></div>
+          <div id="nav">
+            <div class="link" id="first-link">
+              <div class="reference-wrapper">
+                <div class="top"><p>001</p><p class="reference">DISEÑO ÚNICO</p></div>
+                <div class="bottom"><p>001</p><p class="reference">DISEÑO ÚNICO</p></div>
+              </div>
+            </div>
+            <div class="link">
+              <div class="reference-wrapper">
+                <div class="top"><p>002</p><p class="reference">MODO TURBO</p></div>
+                <div class="bottom"><p>002</p><p class="reference">MODO TURBO</p></div>
+              </div>
+            </div>
+            <a class="link" id="github-link" href="https://github.com/juanmcodes" target="_blank" rel="noopener noreferrer">
+              <div class="reference-wrapper">
+                <div class="top"><p>003</p><p class="reference">GITHUB JUANMCODES</p></div>
+                <div class="bottom"><p>003</p><p class="reference">GITHUB JUANMCODES</p></div>
+              </div>
+            </a>
+            <a class="link" id="original-website" href="https://www.ichiban.bike/" target="_blank" rel="noopener noreferrer">
+              <div class="reference-wrapper">
+                <div class="top"><p>004</p><p class="reference">SITIO ORIGINAL</p></div>
+                <div class="bottom"><p>004</p><p class="reference">SITIO ORIGINAL</p></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="bot-container">
+        <div id="title" class="gradient-text">HECHA CON EL ESPÍRITU DE LA SIMPLICIDAD</div>
+        <div id="kanji" class="gradient-text">KANSO</div>
+        <div id="bento">
+          <div class="cuadricula"><img class="points" src="./assets/cuadricula.png" alt="cuadrícula" /></div>
+          <div class="cuadricula"><img class="points" src="./assets/cuadricula.png" alt="cuadrícula" /></div>
+          <div class="text-desc">
+            Inspirada en el principio japonés del Kanso, esta moto eléctrica
+            muestra la belleza de lo simple y lo funcional.
+          </div>
+          <div class="text-desc">
+            En medio del ruido del mundo, ofrece un viaje tranquilo que no solo
+            te lleva a tu destino: enriquece todo el recorrido.
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
